@@ -1,0 +1,219 @@
+html{
+    height: 100%;
+}
+body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #f1f2f6;
+  font-family: 'Raleway', sans-serif;
+  background: #34495e;
+}
+.bg {
+	background: rgba(44, 62, 80, 0.836);
+	background: linear-gradient(90deg, rgba(44, 62, 80, 0.61) 0%, rgba(52, 73, 94, 0.611) 25%, rgba(60, 99, 130, 0.614) 52%, rgba(52, 73, 94, 0.61) 78%, rgba(44, 62, 80, 0.616) 100%), url("../img/airportx.jpg");
+	/* background-color: #2ecc71; */
+	height: 100%;
+	/* background-position: cover; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.admin_log {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  padding: 15px 15px;
+  /* transform: translate(-50%, -50%); */
+  text-align: center;
+  background: #f1f2f6;
+  /* border: 2px solid #f1f2f6; */
+  border-radius: 50%;
+  cursor: pointer;
+}
+.admin_icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.admin {
+  font-size: 24px;
+  text-align: center;
+  color: #191919;
+  text-decoration: none;
+}
+
+.container1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 80%;
+  text-align: center;
+  animation: slideDown 1s cubic-bezier(0.2, 0.27, 0.7, 0.89) 0s 1;
+}
+.container2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  margin-top: 20px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: slideUp 1s cubic-bezier(0.2, 0.27, 0.7, 0.89) 0s 1;
+}
+.container1 h1 {
+  color: #f1f2f6;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.button {
+  background: #f1f2f6;
+  padding: 10px 15px;
+  color: #191919;
+  font-weight: bolder;
+  font-size: 18px;
+  border-radius: 2px;
+  margin: 25px 10px;
+  -webkit-box-shadow: 2px 4px 10px 2px rgba(52,73,93,0.52); 
+  box-shadow: 2px 4px 10px 2px rgba(52,73,93,0.52);
+  text-decoration: none;
+  transition: 0.5s;
+}
+.button:hover {
+  background: #191919;
+  color: #f1f2f6;
+}
+.popup, .popup2, .popup3, .popup4 {
+  background: #191919bb;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.box{
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #191919;
+  text-align: center;
+  transition: 1s;
+  animation: popDown 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1;
+}
+.box h1{
+  color: #f1f2f6;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #f1f2f6;
+  border-radius: 24px;
+  transition: 0.5s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #f1f2f6;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #f1f2f6;
+  padding: 14px 40px;
+  outline: none;
+  color: #f1f2f6;
+  border-radius: 24px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #f1f2f6;
+  color: #34495e;
+}
+.close, .close2, .close3, .close4 {
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  font-size: 20px;
+  color: #f1f2f6;
+  cursor: pointer;
+}
+
+/* .error {
+  box-sizing: border-box;
+  width: 280px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* display: none; */
+
+/* .error i {
+  color: #c0392b;
+  font-size: 40px;
+
+}
+.error .button {
+  background: #2980b9;
+  padding: 6px 10px;
+  color: #f1f2f6;
+  font-weight: normal;
+  font-size: 12px;
+  border-radius: 2px;
+  margin: 0;
+  box-shadow: none;
+} */
+
+
+@keyframes popDown {
+  0% {
+    top: 30%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    top: 10%;
+    opacity: 0;
+  }
+  100% {
+    top: 40%;
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp{
+  0% {
+    top: 90%;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}

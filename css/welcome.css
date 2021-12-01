@@ -1,0 +1,196 @@
+html{
+    height: 100%;
+}
+body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #f1f2f6;
+  font-family: 'Raleway', sans-serif;
+  background: #34495e;
+}
+.bg {
+	background: rgba(44, 62, 80, 0.836);
+	background: linear-gradient(90deg, rgba(44, 62, 80, 0.61) 0%, rgba(52, 73, 94, 0.611) 25%, rgba(60, 99, 130, 0.614) 52%, rgba(52, 73, 94, 0.61) 78%, rgba(44, 62, 80, 0.616) 100%), url("../img/airportx.jpg");
+	/* background-color: #2ecc71; */
+	height: 100%;
+	/* background-position: cover; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.user_icon {
+    display: block;
+    font-size: 3.5rem;
+    padding: 8px 0;
+    color: #191919;
+    margin: 0 auto;
+  }
+
+.admin_log {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.admin_block {
+    padding: 5px 25px;
+    margin-bottom: 10px;
+    background: #f1f2f6;
+    border-radius: 50%;
+}
+.admin_block2 {
+    margin-top: 5px;
+    display: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    background: #f1f2f6;
+}
+.admin_block3 {
+    display: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    background: #f1f2f6;
+}
+.admin {
+    display: block;
+    padding-bottom: 8px;
+    font-size: 24px;
+    text-align: center;
+    color: #191919;
+    text-decoration: none;
+}
+
+.back {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.back a i {
+    font-size: 24px;
+    color: white;
+}
+
+.title {
+    width: 80%;
+    margin: 100px auto 40px auto;
+}
+.title h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #f1f2f6;
+    text-transform: uppercase;
+    /* margin: 0 auto; */
+}
+
+.main_content {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+.main_content h2 {
+    display: inline;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #f1f2f6;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #f1f2f6;
+}
+#col3 {
+    width: 30%;
+}
+#col3 .content {
+    margin: 40px 20px;
+}
+.main_content .row{
+    margin-top: 20px;
+}
+.main_content .col {
+    text-align: center;
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+    margin: 0 auto;
+}
+.main_content .col .content {
+    margin: 40px 80px;
+    padding: 20px;
+    background-color: #f1f2f657;
+    transition: 0.5s ease-in-out;
+}
+.main_content .col .content:hover {
+    background-color: #f1f2f6;
+}
+.main_content .col .content a {
+    display: block;
+    color: #f1f2f6;
+    text-decoration: none;
+    font-size: 28px;
+    transition: 0.5s ease-in-out;
+}
+.main_content .col .content:hover a {
+    color: #191919;
+}
+.main_content .col .content a i {
+    font-size: 7rem;
+    display: block;
+    padding-bottom: 30px;
+}
+.main_content .col .content a .icon_t {
+    font-size: 5rem;;
+}
+@media screen and (max-width: 1199.98px ) {
+    .title h1 {
+        font-size: 2.5rem;
+    }
+    .main_content .col .content a i {
+        font-size: 4.55rem;
+    }
+    .main_content .col .content {
+        margin: 20px 40px;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+
+    .main_content .col {
+        width: 80%;
+    }
+    .admin_log {
+       right: 2%; 
+    }
+    .main_content .col .content {
+        margin: 20px 80px;
+    }
+    #col3 {
+        width: 48%;
+    }
+    #col3 .content {
+        margin: 20px 20px;
+    }
+    .main_content .col .content a i {
+        font-size: 4rem;
+    }
+    .main_content .col .content a {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 767.98px ) {
+    .title h1 {
+        font-size: 1.5rem;
+    }
+    #col3 {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 575.98px ) {
+    .admin_log {
+        top: 4%; 
+     }
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>َLogin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body class="bg">
+
+    <div class="admin_log" id="ad_button">
+      <img src="img/admin.png" alt="" class="admin_icon">
+      <a href="#" class="admin">ADMIN</a>
+    </div>
+
+    <div class="container1">
+      <h1>AIRPORT MANAGEMENT SYSTEM</h1>
+    </div>
+
+    <div class="container2">
+      <a href="#" class="button" id="log_button">Login</a>
+      <a href="#" class="button" id="reg_button">Register</a>
+    </div>
+    <!-- <i class="fas fa-address-book"></i> -->
+    <div class="popup">
+      <div class="box">
+        <form class="box" action="php/login.php" method="post">
+          <h1>USER LOGIN</h1>
+          <i class="far fa-times-circle close"></i>
+          <input type="text" name="username" id="user_log" placeholder="Username"required>
+          <span id="availability"></span>
+          <input type="password" name="password" placeholder="Password"required>
+          <input type="submit" name="" value="Login">
+          <a href="#" style="color: #f1f2f67e;" id="new_pass">Change Password</a>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup2">
+      <div class="box">
+        <form class="box" action="php/register.php" method="post">
+          <h1>User Register</h1>
+          <i class="far fa-times-circle close2"></i>
+          <input type="text" name="ssn" id="ssn_reg" placeholder="Employee SSN"required>
+          <span id="availability1"></span>
+          <input type="text" name="username" id="user_reg" placeholder="Username"required>
+          <span id="availability2"></span>
+          <input type="password" name="password" placeholder="Password"required>
+          <input type="submit" name="" value="Register">
+        </form>
+      </div>
+    </div>
+
+    <div class="popup3">
+      <div class="box">
+        <form class="box" action="php/admin.php" method="post">
+          <h1>ADMIN LOGIN</h1>
+          <i class="far fa-times-circle close3"></i>
+          <input type="text" name="username" id="user_ad" placeholder="Username"required>
+          <span id="availability3"></span>
+          <input type="password" name="password" placeholder="Password"required>
+          <input type="submit" name="" value="Login">
+        </form>
+      </div>
+    </div>
+
+    <div class="popup4">
+      <div class="box">
+        <form class="box" action="php/changepass.php" method="post">
+          <h1>Change Password</h1>
+          <i class="far fa-times-circle close4"></i>
+          <input type="text" name="username" id="change_pass" placeholder="Username"required>
+          <span id="availability4"></span>
+          <input type="password" name="oldpassword" placeholder="Previous Password"required>
+          <input type="password" name="newpassword" placeholder="New Password"required>
+          <input type="submit" name="" value="Confirm">
+        </form>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/6756dd734e.js" crossorigin="anonymous"></script>
+
+    <script>
+      document.getElementById("log_button").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "flex";
+      })
+
+      document.querySelector(".close").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "none";
+      })
+
+      document.getElementById("reg_button").addEventListener("click", function(){
+        document.querySelector(".popup2").style.display = "flex";
+      })
+
+      document.querySelector(".close2").addEventListener("click", function(){
+        document.querySelector(".popup2").style.display = "none";
+      })
+
+      document.getElementById("ad_button").addEventListener("click", function(){
+        document.querySelector(".popup3").style.display = "flex";
+      })
+
+      document.querySelector(".close3").addEventListener("click", function(){
+        document.querySelector(".popup3").style.display = "none";
+      })
+      document.getElementById("new_pass").addEventListener("click", function(){
+        document.querySelector(".popup4").style.display = "flex";
+      })
+      document.querySelector(".close4").addEventListener("click", function(){
+        document.querySelector(".popup4").style.display = "none";
+      })
+
+
+      $(document).ready(function() {
+        $('#user_log').blur(function() {
+          var username = $(this).val();
+          $.ajax({
+            url: "php/check.php",
+            method: "POST",
+            data: {username_log:username},
+            dataType: "text",
+            success: function(html)
+            {
+              $("#availability").html(html)
+            }
+          });
+        });
+
+        $('#ssn_reg').blur(function() {
+          var ssn = $(this).val();
+          $.ajax({
+            url: "php/check.php",
+            method: "POST",
+            data: {ssn_reg:ssn},
+            dataType: "text",
+            success: function(html)
+            {
+              $("#availability1").html(html)
+            }
+          });
+        });
+
+        $('#user_reg').blur(function() {
+          var username = $(this).val();
+          $.ajax({
+            url: "php/check.php",
+            method: "POST",
+            data: {username_reg:username},
+            dataType: "text",
+            success: function(html)
+            {
+              $("#availability2").html(html)
+            }
+          });
+        });
+
+        $('#user_ad').blur(function() {
+          var admin = $(this).val();
+          $.ajax({
+            url: "php/check.php",
+            method: "POST",
+            data: {user_ad:admin},
+            dataType: "text",
+            success: function(html)
+            {
+              $("#availability3").html(html)
+            }
+          });
+        });
+
+        $('#change_pass').blur(function() {
+          var change_pass = $(this).val();
+          $.ajax({
+            url: "php/check.php",
+            method: "POST",
+            data: {change_pass:change_pass},
+            dataType: "text",
+            success: function(html)
+            {
+              $("#availability4").html(html)
+            }
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>
